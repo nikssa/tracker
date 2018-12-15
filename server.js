@@ -7,7 +7,21 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/Tododb');
+// mongoose.connect('mongodb://localhost/Tododb'); // local mongodb setup
+
+// mongodb atlas setup
+const uri = 'mongodb+srv://nikssa:%23N4poli%21@siterka-mongodb-wklcx.mongodb.net';
+const options = {
+    useNewUrlParser: true,
+    dbName: 'tododb',
+    retryWrites: true
+};
+
+
+mongoose.connect(uri, options, function(error){
+    if (error) console.log('mongoose connection error: ' + error)
+});
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
