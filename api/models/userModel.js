@@ -24,6 +24,15 @@ var UserSchema = new Schema({
     type: String,
     required: 'Kindly enter the user last name'
   },
+  email: {
+    type: String,
+    trim: true,
+    lowercase: true,
+    unique: true,
+    required: 'Email address is required',
+    validate: [validateEmail, 'Kindly enter a valid email address / validate'],
+    match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Kindly enter a valid email address / match']
+  },
   createdDate: {
     type: Date,
     default: Date.now
@@ -44,17 +53,7 @@ var UserSchema = new Schema({
     }],
     required: 'Kindly choose user role',
     default: ['siterka']
-  },
-  email: {
-    type: String,
-    trim: true,
-    lowercase: true,
-    unique: true,
-    required: 'Email address is required',
-    validate: [validateEmail, 'Kindly enter a valid email address / validate'],
-    match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Kindly enter a valid email address / match']
   }
 });
-
 
 module.exports = mongoose.model('Users', UserSchema);
