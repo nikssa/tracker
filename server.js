@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 mongoose.Promise = global.Promise;
-// mongoose.connect('mongodb://localhost/Tododb'); // local mongodb setup
+// mongoose.connect('mongodb://localhost/users'); // local mongodb setup
 
 // mongodb atlas setup
 const uri = 'mongodb+srv://nikssa:%23N4poli%21@siterka-mongodb-wklcx.mongodb.net';
