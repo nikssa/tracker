@@ -1,0 +1,132 @@
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+}
+
+.user-form{
+    margin: 0 auto;
+    width: 500px;
+}
+
+h1{
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+h2{
+    font-size: 2rem;
+    margin: 12px 0 5px;
+}
+
+h3{
+    font-size: 1.7rem;
+    margin: 10px 0 5px;
+}
+
+h3 span{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+form{
+    
+}
+
+label{
+    display: inline-block;
+    margin: 5px 0;
+    width: 100%;
+}
+/* label:last-child{
+    margin-bottom: 0;
+} */
+label span{
+    display: inline-block;
+    padding-left: 2px;
+    vertical-align: middle;
+}
+
+input{
+    font-size: 1.5rem;
+}
+input:not([type=submit]){
+    transition: all 0.30s ease-in-out;
+    outline: none;
+}
+input:not([type=submit]):focus{
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=date],
+input[type=number],
+input[type=password]{
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    /* font-size: 1.5rem; */
+    margin-top: 5px;
+    padding: 8px 6px;
+    width: 100%;
+}
+
+input::placeholder{
+    color: #ccc;
+}
+
+input[type=submit]{
+    background-color: #ccc;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+textarea{
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    min-height: 150px;
+    margin-top: 5px;
+    padding: 8px 6px;
+    width: 100%;
+    transition: all 0.30s ease-in-out;
+    outline: none;
+}
+textarea:focus{
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+
+select{
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 5px;
+    padding: 8px 6px;
+    width: 50%;
+    transition: all 0.30s ease-in-out;
+    outline: none;
+}
+select:focus{
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+
+.radio-group{
+    margin: 10px 0;
+}
+
+.separator{
+    border: 1px dashed #ccc;
+    margin: 10px 0;
+}
