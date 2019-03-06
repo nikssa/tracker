@@ -1,0 +1,11 @@
+$body-font: "Arial";
+html{
+    font-size: 10px;
+}
+body {
+    font-family: $body-font;
+    font-size: 1.4rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
